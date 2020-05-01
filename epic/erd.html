@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ERD</title>
+</head>
+<body>
+  <h1><strong>Conceptual Model</strong></h1>
+<br>
+  <p><strong>Entities $ Attributes:</strong></p>
+  <p>User:</p>
+  <ul>
+    <li>userId (Primary Key)</li>
+    <li>usersName</li>
+    <li>userShippingInfo</li>
+  </ul>
+  <p>Item:</p>
+  <ul>
+    <li>itemId (Primary Key)</li>
+    <li>itemQuantity</li>
+  </ul>
+  <p>Order:</p>
+  <ul>
+    <li>orderId (Primary Key)</li>
+    <li>userShippingInfo (Foreign Key)</li>
+    <li>itemId (Foreign Key)</li>
+  </ul>
+  <p>Relationship</p>
+  <ul>
+    <li>One user may have many different orders.</li>
+    <li>Orders may have different items.</li>
+  </ul>
+</body>
+</html>
