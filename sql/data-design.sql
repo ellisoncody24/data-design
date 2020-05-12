@@ -14,7 +14,7 @@ drop table if exists user;
 
 create table user(
                      userId binary(16) not null,
-                     usersName varchar(32),
+                     userName varchar(32),
                      userShippingInfo varchar(255),
                      primary key(userId)
 );
@@ -30,7 +30,6 @@ create table `order`(
                         orderId binary(16) not null,
                         orderUserId binary(16) not null,
                         orderDate datetime(6) not null,
-                        index (orderId),
                         index (orderUserId),
                         foreign key(orderUserId) references user(userId),
                         primary key(orderId)
