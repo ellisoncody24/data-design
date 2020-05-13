@@ -22,7 +22,6 @@ create table user(
 create table item(
                     itemId binary(32) not null,
                     itemQuantity varchar(32) not null,
-                    index (itemId),
                     primary key(itemId)
 );
 
@@ -38,6 +37,7 @@ create table `order`(
 create table itemOrder(
                            itemOrderItemId binary(16),
                            itemOrderOrderId binary(16),
+                           index (itemOrderItemId),
                            foreign key(itemOrderItemId) references item(itemId),
                            foreign key(itemOrderOrderId) references `order`(orderId)
 );
